@@ -1,0 +1,53 @@
+== VERSION 1.3 ==
+
+Visual Studio 2019, https://rimworldwiki.com/wiki/Modding_Tutorials/Setting_up_a_solution
+
+== VERSION 1.1 and 1.2 ==
+
+Where to locate mod in filesystem
+
+	Steam-version
+		C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2018007021
+	Local-version
+		C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MemoryImplants
+
+How to extract class
+
+	Use dnSpy (dnSpy-netcore-win64), C:\Tools\dnSpy-net-win64
+	
+	Open DLL file
+		C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll
+		
+	Find SkillRecord class, select and copy the contents
+	
+How to compile
+
+	Open visual studio solution MemoryImplants.sln
+	
+	This must be open in Visual Studio 2017, newer version won't work
+	
+	Make sure Assembly-CSharp, 0Harmony and UnityEngine are all found. If not create the "Source-DLLs"
+	folder in rimworld-memoryimplants\Source\MemoryImplants
+	
+	From C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed
+		Assembly-CSharp.dll
+		UnityEngine.dll
+		
+	From C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\v1.1\Assemblies
+		0Harmony.dll
+		
+	Select release version and build, copy DLL from
+		C:\Projects\rimworld-memoryimplants\Source\MemoryImplants\bin\Release\MemoryImplants.dll
+	into
+		C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2018007021\1.1\Assemblies
+	
+	
+How to publish mod
+	Update the Local version of the mod. Select it in mod list while being in development mode.
+	
+	Local version C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\rimworld-memoryimplants
+	
+	Click "Update on Steam Workshop"
+	
+
+
